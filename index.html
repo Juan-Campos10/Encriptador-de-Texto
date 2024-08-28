@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Style/style.css">    
+    <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+    <header>
+<img src="./aseets/IMG/Logo Alura.png" alt="logo Alura">
+    </header>
+
+    <main>
+    
+        <form class="Formulario_Seccion">
+            <textarea class="Area_Texto" name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="boton_container"> 
+                <div class="alert_mensaje">
+                    <img src="./aseets/IMG/Icono exclamacion.png" alt="alert Icono">
+                    <span>Solo escribir en letras minúsculas y sin tildes</span>
+                </div>
+            </div>
+        <div class="Submit_Container">
+            <input class="Boton_ecriptar" type="submit" value="ENCRIPTAR">
+            <input class="Boton_ecriptar Boton_dcriptar" type="submit" value="DESENCRIPTAR">
+        </div>
+        </form>
+        <aside class="Resultado_Encriptado">
+            <img src="./aseets/IMG/Not Found.png" alt="Imagen de Resultado" class="Imagen_Resultado">
+            <div class="loader" hidden></div>
+            <div class="Resultado_Container">
+                <h3 class="Titulo_Resultado">Ningún Mensaje ha sido ingresado</h3>
+                <p class="Texto_Resultado">Ingresa el texto que desees encriptar o desencriptar</p>
+                <button class="Boton_Resultado Boton_ecriptar Boton_dcriptar hidden" >
+                Copiar
+                </button>
+            </div>
+        </aside>
+    
+</main>
+
+<script src="./encriptador.js"></script>
+
+</body>
+</html>
