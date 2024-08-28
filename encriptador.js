@@ -6,7 +6,7 @@ const loaderrayo = d.querySelector(".loader");
 const resultadoTitulo = d.querySelector(".Titulo_Resultado");
 const resultadoTexto = d.querySelector(".Texto_Resultado");
 const botonEncriptar = d.querySelector(".Boton_ecriptar");
-const botonDesencriptar = d.querySelector(".Boton_ecriptar");
+const botonDesencriptar = d.querySelectorAll(".Boton_ecriptar");
 const botonCopiar = d.querySelector(".Boton_Resultado");
 
 
@@ -66,3 +66,22 @@ botonEncriptar.addEventListener("click", (e)=>{
     botonCopiar.classList.remove("hidden");
     resultadoTitulo.textContent = "El Resultado es:";
 });
+
+botonDesencriptar[1].addEventListener("click", (e)=>{
+    e.preventDefault();
+    let mensaje = texArea.value.toLowerCase();
+    let mensajedesencriptado = desencriptarmensaje(mensaje);
+    resultadoTexto.textContent = mensajedesencriptado;
+    botonCopiar.classList.remove("hidden");
+})
+
+botonCopiar.addEventListener("click", ()=>{
+    let textocopiado = resultadoTexto.textContent;
+    navigator.clipboard.writeText(textocopiado).then(()=>{
+        imagenresultado.style.display = "block";
+        loaderrayo.classList.add("hidden");
+        resultadoTexto.textContent = "Copiado";
+        botonCopiar.classList.add("hidden");
+        resultadoTexto.textContent = "";
+    })
+})
